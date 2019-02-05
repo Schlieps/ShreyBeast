@@ -36,5 +36,13 @@ $(document).ready(function(){
           showCursor:false
         });
   
-    
+    //smooth scroll
+    $('.nav-item a').click(function(link){
+      link.preventDefault();
+      
+      let target = $(this).attr('href');
+      $('html, body').animate({
+        scrollTop:$(target).offset().top
+      },3000);
+    })
 });
