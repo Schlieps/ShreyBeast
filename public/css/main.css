@@ -7,7 +7,7 @@
     --mainPurple:#9883E5;
     --mainPink:#EDC0AD;
     --mainGrey:#989898;
-    --transparent:rgba(0,0,0,0.6);
+    --transparent:rgba(0,0,0,0.4);
 }
 
 body{
@@ -45,7 +45,9 @@ hr{
     background-color: var(--mainWhite);
     color: var(--mainBlack);
 }
-
+.grey-background{
+    background-color:var(--mainGrey);
+}
 /*navbar*/
 .navbar-initial{
     position:absolute;
@@ -196,19 +198,35 @@ hr{
   }
 }
 
-/*About*/
+/*Intro section*/
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 80px;
   width: 80px;
 }
 .carousel-img{
-    border-radius: 5%;
+    border-radius: 100%;
+}
+.carousel-content {
+  position: absolute;
+  bottom: 25%;
+  left: 25%;
+  z-index: 20;
+  color: var(--mainGrey);
+  font-family: 'Allerta Stencil', sans-serif;
 }
 #theTarget{
     font-family: 'Rajdhani', sans-serif;
-    font-size: 5vw;
-    min-height: 40vh;
+    font-size: 6vw;
+}
+.intro-image{
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url(../img/intro-image.jpg)center/cover no-repeat;
+    clip-path: polygon(0 20%, 100% 5%, 100% 80%, 0% 95%);
+    min-height: 85vh;
+    display:flex;  
+}
+.min-height{
+    min-height: 206px;
 }
 
 /*video header*/
@@ -260,7 +278,7 @@ hr{
 }
 
 /*footer*/
-.footer{
+.grey-background{
     background-color:var(--mainGrey);
 }
 .footer-icon{
